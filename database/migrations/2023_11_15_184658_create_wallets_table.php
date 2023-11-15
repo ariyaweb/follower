@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('wallets', function (Blueprint $table) {
             $table->id();
-            $table->string('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->string('username');
+            $table->foreign('username')->references('username')->on('users')->onDelete('cascade');
             $table->string('balance');
 
         });
