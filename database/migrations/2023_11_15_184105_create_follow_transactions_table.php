@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('follow_transactions', function (Blueprint $table) {
             $table->id();
-            $table->string('username')->unique();
-            $table->string('token');
-            $table->string('register_at');
+            $table->string('follower_id');
+            $table->string('following_id');
+            $table->string('reward');
+            $table->string('follow_at');
         });
     }
 
@@ -24,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('follow_transactions');
     }
 };
