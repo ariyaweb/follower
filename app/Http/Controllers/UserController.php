@@ -16,7 +16,7 @@ class UserController extends Controller
         $this->users = $users;
     }
 
-    public function createuser(UserCreateRequest $request)
+    public function createuser(UserCreateRequest $request): mixed
     {
         //validation data
         $validated = $request->validated();

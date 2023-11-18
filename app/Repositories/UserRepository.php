@@ -5,11 +5,10 @@ namespace App\Repositories;
 use App\Models\User;
 use App\Models\Wallet;
 use Carbon\Carbon;
-use Illuminate\Support\Facades\Validator;
 
 class UserRepository
 {
-    public function CreateUser($data)
+    public function CreateUser($data): mixed
     {
         // create token
         $token = uuid_create();
