@@ -16,7 +16,7 @@ class OrderCreateRequest extends FormRequest
     {
         return [
             'user_id' => 'required',
-            'request_count' => 'required|numeric'
+            'request_count' => 'required'
         ];
     }
 
